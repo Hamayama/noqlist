@@ -1,13 +1,12 @@
 ;; -*- coding: utf-8 -*-
 ;;
 ;; noqlistのテスト
-;; 2014-8-29
+;; 2014-8-30
 ;;
 (use gauche.test)
 (test-start "noqlist")
 
 (use noqlist)
-
 (test-module 'noqlist)
 
 (test-section "noqlist-on")
