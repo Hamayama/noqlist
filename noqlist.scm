@@ -1,7 +1,7 @@
 ;; -*- coding: utf-8 -*-
 ;;
 ;; noqlist.scm
-;; 2014-11-26 v1.07
+;; 2016-10-14 v1.08
 ;;
 ;; ＜内容＞
 ;;   Gaucheでリストの先頭が手続きでなくてもよいモードにするためのモジュールです。
@@ -49,6 +49,6 @@
 ;;   optional      メソッドの省略可能引数の有無(#tまたは#f)
 ;;   specializers  メソッドの引数の型を示す特定化子リスト(例えば `(,<number> ,<string>) 等)
 (define (delete-gf-method gf required optional specializers)
-  (let1 m (get-gf-method gf required optional specializers)
-    (if m (delete-method! gf m))))
+  (if-let1 m (get-gf-method gf required optional specializers)
+    (delete-method! gf m)))
 

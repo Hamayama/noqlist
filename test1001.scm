@@ -1,11 +1,12 @@
 ;; -*- coding: utf-8 -*-
 ;;
 ;; noqlistのテスト
-;; 2014-8-30
+;; 2016-10-14
 ;;
+(add-load-path "." :relative)
 (use gauche.test)
-(test-start "noqlist")
 
+(test-start "noqlist")
 (use noqlist)
 (test-module 'noqlist)
 
